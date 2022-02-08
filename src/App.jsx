@@ -2,6 +2,7 @@ import react, { useState } from "react";
 import Header from "./Header"
 import CreateNote from "./CreateNote";
 import Note from "./Note";
+import Footer from "./Footer";
 
 
 const App = () => {
@@ -16,20 +17,21 @@ const App = () => {
 
     return (
         <>
+            <Header />
             <div className="con">
-                <Header />
                 <CreateNote passNote={addNote} />
-
-                {addItem.map((val, index) => {
-                    return <Note
-                        key={index}
-                        id={index}
-                        title={val.title}
-                        content={val.content}
-                    />
-                })}
-
+                <div className="main12">
+                    {addItem.map((val, index) => {
+                        return <Note
+                            key={index}
+                            id={index}
+                            title={val.title}
+                            content={val.content}
+                        />
+                    })}
+                </div>
             </div>
+            <Footer />
         </>
     )
 }

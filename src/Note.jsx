@@ -6,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 const Note = (props) => {
     return (
         <>
-        <div className="cards">
+
             <div className="card">
                 <div className="card-body">
                     <h5 className="card-title">{props.title}</h5>
@@ -17,7 +17,6 @@ const Note = (props) => {
                 </div>
             </div>
            
-            </div>
         </>
     );
 }
